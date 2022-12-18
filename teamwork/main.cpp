@@ -1,8 +1,13 @@
 #include <SFML/Window.hpp>
+#include "andrey.h"
+#include "kirill.h"
+#include "kostya.h"
 
 int main()
 {
-    sf::Window window(sf::VideoMode(800, 600), "My window");
-
+    foo();
+    andrey();
+    kostya();
+    
     return 0;
 }
