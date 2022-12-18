@@ -5,8 +5,8 @@
 
 int main()
 {
-    foo();
     andrey();
+    kirill();
     kostya();
     
     return 0;
