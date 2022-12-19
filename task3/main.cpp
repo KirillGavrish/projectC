@@ -22,30 +22,14 @@ int main()
         .verticalFOV = 0.55f,
     };
 
-    std::vector<Sphere> const sphere =
-    {
-        {
-            .origin = {0.f, 0.1f, 0.f},
-            .radius = 0.5f,
-            .albedo = {0.8f, 0.3f, 0.3f},
-        },
-        {
-            .origin = {0.f, 0.7f, 0.f},
-            .radius = 0.3f,
-            .albedo = {0.3f, 0.3f, 0.8f},
-        },
-        {
-            .origin = {0.f, -0.4f, 0.f},
-            .radius = 0.7f,
-            .albedo = {0.8f, 0.8f, 0.8f},
-        },
-        {
-            .origin = {0.f, -1000.f, 0.f},
-            .radius = 999.5f,
-            .albedo = {0.2f, 0.5f, 0.2f},
-        },
-    };
+    
+    std::ifstream mesh("../Cup.obj");
+    std::vector<Triangle> triangle = parseOBJ(mesh);
+    Tree const tree = createTree(triangle);
+    Image const image = createImage("../texture.png");
 
+    
+    
     auto const trace = [&sphere](Ray const &ray)
     {
         vec3 const   skyColor = {0.53f, 0.81f, 0.92f};
