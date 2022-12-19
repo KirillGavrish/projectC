@@ -31,6 +31,15 @@ int main()
         .verticalFOV = 0.55f,
     };
     
+    std::ifstream mesh("../Cup.obj");
+    std::vector<Triangle> triangle = parseOBJ(mesh);
+    Tree const tree = createTree(triangle);
+    Image const image = createImage("../A6M.png");
+    
+    
+    
+    
+    
     // Объявление и создать нового окна рендеринга
     sf::RenderWindow window(sf::VideoMode(1920, 1080), "SFML window");
     // Ограничение частоты кадров до 60 кадров в секунду
@@ -51,6 +60,12 @@ int main()
         // Завершение текущего кадра и отображение его содержимого на экране
         window.display();
     }
+    
+    
+    
+    
+    
+    
     
     std::cout << "P3\n" << width << " " << height << "\n255\n";
     for(u32 y = 0u; y < height; ++y)
