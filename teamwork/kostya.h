@@ -1,7 +1,4 @@
 #include "kirill.h"
-#include "structs.h"
-#include "functions.h"
-#include "Tree_project2.cpp"
 #include "stb_image.h"
  
 color background;
