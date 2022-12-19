@@ -3,7 +3,6 @@
 #include<vec3.h>
 #include<fstream>
 #include<vector>
-#include<stdlib.h>
 #include<sstream>
 
 struct vec2
