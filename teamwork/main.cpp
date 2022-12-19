@@ -31,7 +31,7 @@ int main()
     std::ifstream mesh("../Cup.obj");
     std::vector<Triangle> triangle = parseOBJ(mesh);
     Tree const tree = createTree(triangle);
-    Image const image = createImage("../A6M.png");
+    Image const image = createImage("../texture.png");
 
     auto const closestHit = [&](Ray const &ray)
         -> std::optional<Hit>
