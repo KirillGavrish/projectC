@@ -1,5 +1,4 @@
 #include "kirill.h"
-#pragma once
 #include "structs.h"
 #include "functions.h"
 #include "Tree_project2.cpp"
