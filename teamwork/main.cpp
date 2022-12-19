@@ -1,5 +1,6 @@
 #include <SFML/Window.hpp>
 #include "kostya.h"
+#include "kirill.h"
 #include "camera.h"
 
 struct Hit
