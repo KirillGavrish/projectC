@@ -1,9 +1,6 @@
 #include <SFML/Window.hpp>
 #include "kostya.h"
 #include "camera.h"
-#include "image.h"
-#include "tree.h"
-#include "wfobj.h"
 
 struct Hit
 {
